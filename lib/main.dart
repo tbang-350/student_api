@@ -58,11 +58,11 @@ class _DataFromAPIState extends State<DataFromAPI> {
                 } else
                   return ListView.builder(
                       itemCount: snapshot.data.length,
-                      itemBuilder: (context, index) {
+                      itemBuilder: (context, i) {
                         return ListTile(
-                          title: Text('${snapshot.data![index].fullname}'),
-                          subtitle: Text(snapshot.data[index].gender),
-                          trailing: Text(snapshot.data[index].grade),
+                          title: Text(snapshot.data[i].fullname),
+                          subtitle: Text(snapshot.data[i].gender),
+                          trailing: Text(snapshot.data[i].grade),
                         );
                       });
               },
